@@ -1,0 +1,1 @@
+these words will all get capitalized, except the ones in that super special text file, like is, or, and a.
