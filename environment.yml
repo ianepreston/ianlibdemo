@@ -1,3 +1,5 @@
 name: ianlibdemo_conda_env
 dependencies:
   - python
+  - poetry
+  - conda-build
