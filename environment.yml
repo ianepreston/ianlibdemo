@@ -3,6 +3,8 @@ dependencies:
   - python
   - poetry
   - conda-build
+  - conda-verify
+  - anaconda-client
   - pip
   - pip:
     - msgpack-python

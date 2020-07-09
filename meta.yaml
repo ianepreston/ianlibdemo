@@ -1,0 +1,26 @@
+{% set name =  "ianlibdemo" %}
+{% set version = "0.2.0" %}
+{% set wheel = name ~ "-" ~ version ~ "-py3-none-any.whl" %}
+
+package:
+    name: "{{ name|lower }}"
+    version: "{{ version }}"
+
+source:
+    path: ./dist/{{ wheel }}
+
+build:
+    noarch: python
+    script: "{{ PYTHON }} -m pip install ./{{ wheel }} --no-deps --ignore-installed -vv "
+
+requirements:
+    host:
+        - pip
+        - python
+    run:
+        - python
+        - pandas
+
+test:
+    imports:
+        - ianlibdemo
